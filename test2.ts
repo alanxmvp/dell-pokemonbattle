@@ -26,7 +26,7 @@ const resSize = [
   },
 ]
 displayOptions(resSize)
-let ansSize = question('Select resOptions index\n')
+let ansSize = question('Select resSize index\n')
 
 console.log('Choose your Processor')
 const resProcessor = [
@@ -84,4 +84,4 @@ for (let i in prices) {
 console.log(totalPrice)
 console.log(resSize[ansSize].label)
 console.log(resProcessor[ansProcessor].label)
-console.log(resRAM[ansRAM].price.label)
+console.log(resRAM[ansRAM].label)
