@@ -3,7 +3,7 @@ const opponent = "Mr.Mime"
 let myHP = 200
 let oppHP = 200
 const skill = ["Shadow Ball", "Body Slam", "Tackle"]
-let dmg = 0
+let dmg = 10
 let isMyTurn = true
 const experience = 50
 
