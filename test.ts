@@ -5,9 +5,9 @@ let myHP = 200
 let oppHP = 200
 let isMyTurn = true
 
-function displayOptions(move) {
-  let i = 1
-  while (i < 5) {
+function displayMoves(move) {
+  let i = 0
+  while (i < 4) {
     console.log(i + '. ' + move[i].name + ', Damage:' + move[i].damage)
 
     // i += 1
@@ -79,7 +79,7 @@ while (myHP > 0 && oppHP > 0) {
   console.log('It is now ' + attackerName + "'s turn")
 
   if (isMyTurn) {
-    displayOptions(skillCharmander)
+    displayMoves(skillCharmander)
     let ansCharmanderMove = question('Please select your move\n')
 
     console.log(attackerName + ' uses ' + skillCharmander[ansCharmanderMove].name + '.')
@@ -87,7 +87,8 @@ while (myHP > 0 && oppHP > 0) {
     oppHP = oppHP - skillCharmander[ansCharmanderMove].damage
     console.log(defenderName + "'s health is reduced to " + oppHP)
   } else {
-    displayOptions(skillBulbusaur)
+    //const Num = Math.floor(Math.random() * 3)
+    displayMoves(skillBulbusaur)
     let ansBulbasaurMove = question('Please select your move\n')
 
     console.log(attackerName + ' uses ' + skillBulbusaur[ansBulbasaurMove].name + '.')
@@ -110,4 +111,3 @@ if (oppHP <= 0) {
   console.log(opponent + "'s health is reduced to 0")
   console.log('GAME OVER')
 }
-
